@@ -1,6 +1,6 @@
 # 植物叶片病害检测 —— 训练代码（YOLOv11 / Ultralytics）
 
-> 这是**训练侧**代码，与线上系统 [shiguangliushi/crop-disease-system](https://github.com/shiguangiliushi/crop-disease-system)（Django + YOLO 推理）分离：
+> 这是**训练侧**代码，与线上系统 [shiguangiliushi/crop-disease-system](https://github.com/shiguangiliushi/crop-disease-system)（Django + YOLO 推理）分离：
 > 那边只负责推理（Django + YOLO 权重），这边只负责"数据 → 模型"。
 > 数据集与权重都不入库（体积 + 许可原因），按本文件说明自行准备。
 >
