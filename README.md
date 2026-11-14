@@ -1,6 +1,6 @@
 # 植物叶片病害检测 —— 训练代码（YOLOv11 / Ultralytics）
 
-> 这是**训练侧**代码，与线上系统 [crop-disease-system](https://github.com/) 分离：
+> 这是**训练侧**代码，与线上系统 `crop-disease-system`（Django + YOLO 推理）分离：
 > 那边只负责推理（Django + YOLO 权重），这边只负责"数据 → 模型"。
 > 数据集与权重都不入库（体积 + 许可原因），按本文件说明自行准备。
 
@@ -70,7 +70,7 @@ python src/train.py              # 训练（默认读 configs/plant_disease_39.y
 
 ### 4）在 Colab 上跑（零本地环境）
 
-`docs/colab_training.ipynb` 与 `docs/Google_Colab_训练指南.md` 是当时在 Colab 上跑的版本，
+`docs/Google_Colab_训练指南.md` 是当时在 Colab 上跑通的步骤记录，
 适合没有 GPU 的机器先跑通一遍。
 
 ## 四、产物
@@ -113,7 +113,6 @@ crop-disease-training/
 │   ├── classes.json              # 中英别名映射（120 条）
 │   └── class_mapping.txt
 ├── docs/
-│   ├── colab_training.ipynb
 │   └── Google_Colab_训练指南.md
 └── src/
     ├── clean_labels.py
