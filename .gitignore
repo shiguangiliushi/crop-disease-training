@@ -1,0 +1,22 @@
+# ── 数据与产物（**不要提交**）────────────────────────────────────────────
+# 数据集 4+ GB，且原数据集（Kaggle PlantVillage 派生）许可不允许再分发
+data/
+datasets/
+*.zip
+
+# 训练产物
+runs/
+r_*/
+*.pt
+*.onnx
+*.engine
+*.mlpackage
+
+# 日志与缓存
+*.log
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/

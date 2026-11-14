@@ -1,0 +1,29 @@
+# 自动生成的数据集配置（无需手动修改）
+train: ../datasets/train
+val: ../datasets/val
+nc: 24
+names:
+  - Apple_Apple_scab
+  - Apple_Black_rot
+  - Apple_Cedar_apple_rust
+  - Apple_healthy
+  - Blueberry_healthy
+  - Cherry_healthy
+  - Corn_Cercospora_leaf_spot
+  - Corn_healthy
+  - Corn_Northern_Leaf_Blight
+  - Grape_Black_rot
+  - Grape_healthy
+  - Peach_healthy
+  - Pepper_bell_healthy
+  - Potato_Early_blight
+  - Potato_healthy
+  - Potato_Late_blight
+  - Raspberry_healthy
+  - Soybean_healthy
+  - Squash_Powdery_mildew
+  - Strawberry_healthy
+  - Strawberry_Leaf_scorch
+  - Tomato_Early_blight
+  - Tomato_healthy
+  - Tomato_Late_blight

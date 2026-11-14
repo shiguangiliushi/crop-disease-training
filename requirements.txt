@@ -1,0 +1,12 @@
+# 训练环境（与线上后端解耦：这里只训练，不跑 web）
+# 版本与当初训练时一致（ultralytics 8.3.143），避免 API 漂移导致 .yaml 字段名变化
+ultralytics==8.3.143
+torch>=2.2
+torchvision>=0.17
+opencv-python>=4.8
+Pillow>=10.0
+numpy>=1.24
+pandas>=2.0
+PyYAML>=6.0
+tqdm>=4.66
+chardet>=5.2
