@@ -84,7 +84,14 @@ runs/detect/train/results.png         # 训练曲线
 runs/detect/train/confusion_matrix.png
 ```
 
-权重不进 git（`.gitignore` 已排除 `*.pt`）。要发布就放到 GitHub Release 附件或网盘，README 里给链接。
+权重不进 git（`.gitignore` 已排除 `*.pt`）。线上 39 类权重直接下载：
+
+| 版本 | 文件 | 大小 | SHA256 | 下载 |
+|---|---|---|---|---|
+| v1.0 | `best.pt` | 5.97 MB（6,264,483 字节） | `F86C031B…95584A` | [Release v1.0](https://github.com/shiguangiliushi/crop-disease-training/releases/download/v1.0/best.pt) |
+
+放回线上系统时替换 `backend/api/newmodels/best.pt`，然后跑
+`python manage.py check_model_labels` 校验类名与词条映射。
 
 ## 五、数据来源与许可
 
