@@ -1,8 +1,11 @@
 # 植物叶片病害检测 —— 训练代码（YOLOv11 / Ultralytics）
 
-> 这是**训练侧**代码，与线上系统 `crop-disease-system`（Django + YOLO 推理）分离：
+> 这是**训练侧**代码，与线上系统 [shiguangliushi/crop-disease-system](https://github.com/shiguangliushi/crop-disease-system)（Django + YOLO 推理）分离：
 > 那边只负责推理（Django + YOLO 权重），这边只负责"数据 → 模型"。
 > 数据集与权重都不入库（体积 + 许可原因），按本文件说明自行准备。
+>
+> **线上模型实测**（39 类，val 4528 张，CPU）：Precision **87.8%** / Recall **89.6%** / mAP50 **91.5%**。
+> 详见 [docs/评估方法.md](docs/评估方法.md) —— 那里也写清了这份数据集的检测其实是分类这个关键前提。
 
 ## 一、这套代码做了什么
 
@@ -96,7 +99,8 @@ runs/detect/train/confusion_matrix.png
 | Ultralytics | 8.3.143 |
 | 训练设备 | Windows + CPU（`imgsz=128, batch=4, epochs=20`，为省内存调低） |
 | 数据规模 | 原始 8.7 万文件；切分后 train 8.2 万 / val 3.9 万（含增强） |
-| 线上权重 | 约 6 MB（`best.pt`） |
+| 线上权重 | 约 6 MB（`best.pt`，SHA256 `F86C031B…`） |
+| 线上指标 | P 0.8777 / R 0.8959 / mAP50 0.9149（val 全量 4528 张，CPU） |
 
 ## 七、目录结构
 
@@ -113,6 +117,8 @@ crop-disease-training/
 │   ├── classes.json              # 中英别名映射（120 条）
 │   └── class_mapping.txt
 ├── docs/
+│   ├── 评估方法.md               # ⭐ 真实指标 + 复现命令 + 这些数字该怎么看
+│   ├── pr_curve.png
 │   └── Google_Colab_训练指南.md
 └── src/
     ├── clean_labels.py
